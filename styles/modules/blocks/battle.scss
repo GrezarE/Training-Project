@@ -1,0 +1,106 @@
+@use "sass:map";
+
+.battle {
+  @include flex;
+  @include reset-brouser;
+  padding-bottom: 30px;
+  @include screenSize($size: 768px) {
+    align-items: flex-start;
+    padding-left: 50px;
+    background-image: url(../images/tablet-battle-back.svg);
+    background-position: left bottom;
+    background-size: 220px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @include screenSize($size: 1440px) {
+      padding-left: 160px;
+      background-image: url(../images/desktop-battle-back.svg);
+      background-position: 100px bottom;
+      background-size: 440px;
+    }
+  }
+  &__header {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 40px, $height: 36px, $weight: 600);
+    text-align: start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    align-self: flex-start;
+    @include screenSize($size: 350px) {
+      align-self: center;
+    }
+    @include screenSize($size: 768px) {
+      font-size: 70px;
+      padding-bottom: 40px;
+      padding-top: 50px;
+      align-self: flex-start;
+      padding-left: 0;
+    }
+    @include screenSize($size: 1440px) {
+      padding-top: 80px;
+    }
+  }
+  &__text {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 130%);
+    max-width: map.get($elementSize, "mobile");
+    padding-bottom: 60px;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      max-width: map.get($elementSize, "tablet");
+      padding-bottom: 140px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 110px;
+    }
+  }
+  &__cards {
+    @include screenSize($size: 768px) {
+      margin-left: unset;
+    }
+  }
+  &__photo-box {
+    @include reset-brouser;
+    list-style: none;
+    max-width: map.get($elementSize, "mobile");
+    margin-right: 28px;
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
+    @include screenSize($size: 1440px) {
+      margin-right: 80px;
+    }
+  }
+  &__photo {
+    @include flex;
+  }
+  &__img {
+    max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      max-width: map.get($elementSize, "photo");
+    }
+    padding-bottom: 30px;
+  }
+  &__image {
+    max-width: map.get($elementSize, "mobile");
+    padding-bottom: 20px;
+    padding-top: 50px;
+    @include screenSize($size: 768px) {
+      align-self: flex-end;
+      padding-right: 50px;
+      padding-top: 140px;
+      max-width: map.get($elementSize, "photo");
+    }
+    @include screenSize($size: 1440px) {
+      padding-right: 160px;
+      padding-top: 110px;
+    }
+  }
+  &__slide {
+    @include screenSize($size: 768px) {
+      display: none;
+    }
+  }
+}

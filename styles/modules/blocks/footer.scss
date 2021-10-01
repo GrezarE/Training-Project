@@ -1,0 +1,49 @@
+.footer {
+  @include reset-brouser;
+  @include flex;
+  background-color: $secondBackground;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: center;
+    top: 40px;
+    @include wh($w: 38px, $h: 54px);
+    background-image: url(../images/figure.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include screenSize($size: 768px) {
+      top: 80px;
+
+    }
+  }
+  &__button {
+    margin-top: 134px;
+    margin-bottom: 40px;
+    @include screenSize($size: 768px) {
+      margin-top: 194px;
+      margin-bottom: 60px;
+    }
+  }
+  &__header {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 130%, $weight: 400);
+    text-align: center;
+    padding-bottom: 10px;
+    @include screenSize($size: 768px) {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  &__coopyright {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 12px, $weight: 400, $color: $gray);
+    text-align: center;
+    padding-bottom: 40px;
+    @include screenSize($size: 768px) {
+      font-size: 15.1px;
+      line-height: 20px;
+      padding-bottom: 80px;
+    }
+  }
+}
