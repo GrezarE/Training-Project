@@ -15,8 +15,8 @@
 <body class="body">
   <div class="page">
     <header class="header">
-      <p class="header__invite">Вступайте в клуб <img src="./images/arrow.svg" alt="" class="header__arrow"></p>
-      <button class="button header__button">Зарегистрироваться</button>
+      <p class="header__invite">Вступайте в клуб <img src="./images/arrow.svg" alt="Стрелка" class="header__arrow"></p>
+      <button type="button" class="button header__button">Зарегистрироваться</button>
       <div class="header__club">
         <p class="header__club-text">КЛУБ</p>
       </div>
@@ -26,17 +26,11 @@
       <img src="./images/boardbig.svg" alt="шашечки" class="header__image">
     </header>
     <main class="main">
-      <!-- <section class="title">
-        <h1 class="title__header">Правильные шахматы</h1>
-        <p class="title__subtitle">Приходите к нам, играть в шахматы! Сразитесь классическом поединке, блиц состязании и
-          бою с гройсмейстером. </p>
-        <img src="./images/board.svg" alt="шашечки" class="title__image">
-      </section> -->
       <section class="team">
         <h2 class="team__header">Наша команда</h2>
         <p class="team__text">Лучшие шахматисты и шахматистки любители России, гройсмейстеры, с ними играть — одно
           удовольствие!</p>
-        <div class="team__cards swiper mySwiper">
+        <div class="team__cards swiper ">
           <ul class="team__persons swiper-wrapper">
             <li class="team__person swiper-slide">
               <img src="./images/photo-first.png" alt="фото" class="team__photo">
@@ -65,7 +59,7 @@
         <h2 class="battle__header">Сражения</h2>
         <p class="battle__text">Сражайтесь в парах и приятно проводите время. Если хотите прокачать свои навыки —
           сыграйте с нашими шахматистами.</p>
-        <div class="battle__cards swiper mySwiper">
+        <div class="battle__cards swiper ">
           <ul class="battle__photo-box swiper-wrapper">
             <li class="battle__photo swiper-slide">
               <img src="./images/battle-one.png" alt="Шахматы на скамейке" class="battle__img">
@@ -83,7 +77,7 @@
       </section>
     </main>
     <footer class="footer">
-      <button class="button footer__button">Зарегистрироваться</button>
+      <button type="button" class="button footer__button">Зарегистрироваться</button>
       <h2 class="footer__header">Шахматный клуб в Москве.</h2>
       <p class="footer__coopyright">© Chees Club.</p>
     </footer>
@@ -94,7 +88,7 @@
         <form class="popup__box" name="reg">
           <fieldset class="popup__registration">
             <input type="text" class="popup__item" name="name" value="" placeholder="Имя">
-            <input type="text" class="popup__item" name="Email" value="" placeholder="Email">
+            <input type="email" class="popup__item" name="Email" value="" placeholder="Email">
           </fieldset>
           <button type="submit" class="button popup__button">Зарегистрироваться</button>
         </form>
