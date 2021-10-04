@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
@@ -9,6 +9,7 @@ const button = document.querySelector('.button');
 const headerButton = document.querySelector('.header__button');
 const footerButton = document.querySelector('.footer__button');
 const popubButton = document.querySelector('.popup__button');
+const form = document.querySelector('.popup')
 
 
 function closeOverlay(event) {
@@ -36,7 +37,6 @@ function registration(evt) {
   closePopup(popupModale);
 }
 
-popubButton.addEventListener('click', registration)
+form.addEventListener('submit', registration);
 
-// const width = document.documentElement.clientWidth
-// console.log(width)
+

@@ -75,6 +75,9 @@
   }
   &__photo {
     @include flex;
+    @include screenSize($size: 768px) {
+    align-items: flex-start;
+    }
   }
   &__img {
     max-width: map.get($elementSize, "mobile");
@@ -91,7 +94,7 @@
       align-self: flex-end;
       padding-right: 50px;
       padding-top: 140px;
-      max-width: map.get($elementSize, "photo");
+      max-width: map.get($elementSize, "board");
     }
     @include screenSize($size: 1440px) {
       padding-right: 160px;

@@ -46,6 +46,8 @@
     @include font($size: 30px, $height: 90%, $weight: 600);
     @include screenSize($size: 768px) {
       font-size: 34px;
+      padding-top: 50px;
+      padding-bottom: 78px;
     }
   }
   &__box {
@@ -59,7 +61,11 @@
     gap: 10px;
     @include screenSize($size: 768px) {
     gap: 20px;
-    padding-bottom: 143px;
+    padding-bottom: 243px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 253px;
+
     }
   }
   &__item {
@@ -83,7 +89,9 @@
     &:active,
     &:focus {
       background-color: $lightBlack;
-    }
+      cursor: pointer;
+      border: 1px solid $purple;
+      }
   }
   &__button {
   }

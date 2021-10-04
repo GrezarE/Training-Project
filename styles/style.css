@@ -1,7 +1,13 @@
 @import url(../vendors/normalize.css);
 @font-face {
   font-family: "Noto Sans";
+  font-weight: 400;
   src: url("../vendors/fonts/notosans.woff") format("woff"), url("../vendors/fonts/notosans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  src: url("../vendors/fonts/notosans_semibold.woff") format("woff"), url("../vendors/fonts/notosans_semibold.woff2") format("woff2");
 }
 .button {
   position: relative;
@@ -685,6 +691,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .battle__photo {
+    align-items: flex-start;
+  }
+}
 .battle__img {
   max-width: 280px;
   padding-bottom: 30px;
@@ -704,7 +715,7 @@
     align-self: flex-end;
     padding-right: 50px;
     padding-top: 140px;
-    max-width: 320px;
+    max-width: 416px;
   }
 }
 @media (min-width: 1440px) {
@@ -856,6 +867,8 @@
 @media (min-width: 768px) {
   .popup__title {
     font-size: 34px;
+    padding-top: 50px;
+    padding-bottom: 78px;
   }
 }
 .popup__box {
@@ -878,7 +891,12 @@
 @media (min-width: 768px) {
   .popup__registration {
     gap: 20px;
-    padding-bottom: 143px;
+    padding-bottom: 243px;
+  }
+}
+@media (min-width: 1440px) {
+  .popup__registration {
+    padding-bottom: 253px;
   }
 }
 .popup__item {
@@ -908,6 +926,8 @@
 }
 .popup__item:hover, .popup__item:active, .popup__item:focus {
   background-color: rgba(26, 26, 26, 0.6);
+  cursor: pointer;
+  border: 1px solid #5036e6;
 }
 .popup_opened {
   visibility: visible;
