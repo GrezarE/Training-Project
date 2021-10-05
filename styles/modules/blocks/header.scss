@@ -1,0 +1,152 @@
+@use "sass:map";
+
+.header {
+  width: 87.5%;
+  padding: 19px 6.25% 20px;
+  position: relative;
+  @include flex($justify: space-between);
+  @include screenSize($size: 768px) {
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+    padding-top: 30px;
+    width: 87%;
+    display: grid;
+    grid-template-columns: 1fr 184px;
+  }
+  @include screenSize($size: 1440px) {
+    padding-left: 11.1%;
+    padding-right: 11.1%;
+    width: 77.8%;
+    grid-template-columns: 1fr 218px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    @include wh($w: 26px, $h: 36px);
+    background-image: url(../images/figure.svg);
+    @include screenSize($size: 768px) {
+      top: 26px;
+      left: 6.5%;
+      @include wh($w: 38px, $h: 54px);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @include screenSize($size: 1440px) {
+      left: 11.1%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    @include wh($w: 120px, $h: 60px);
+    background-image: url(../images/mobile-header-back.svg);
+    top: 92px;
+    right: 20px;
+    @include screenSize($size: 768px) {
+      @include wh($w: 130px, $h: 520px);
+      background-image: url(../images/tablet-header-back.svg);
+      top: 300px;
+      right: 0%;
+    }
+    @include screenSize($size: 1440px) {
+      background-image: url(../images/desktop-header-back.svg);
+      top: 150px;
+      @include wh($w: 480px, $h: 640px);
+    }
+  }
+  &__button {
+    align-self: end;
+    @include screenSize($size: 768px) {
+      grid-column-start: 2;
+      font-size: 13px;
+      @include wh($w: 184px, $h: 44px);
+    }
+    @include screenSize($size: 1440px) {
+      @include wh($w: 218px, $h: 48px);
+      font-size: 15px;
+    }
+  }
+  &__club {
+    @include wh($w: 63px, $h: 40px);
+    background-color: $secondBackground;
+    text-align: center;
+    align-self: start;
+    @include flex;
+    border-radius: 0 50px 50px 0;
+    margin-bottom: 60px;
+    margin-top: 53px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      @include wh($w: 84px, $h: 50px);
+      margin-top: 66px;
+      margin-bottom: 70px;
+    }
+    @include screenSize($size: 1440px) {
+      margin-top: 62px;
+    }
+  }
+  &__club-text {
+    @include reset-brouser;
+    @include font($size: 12px, $height: 10.8px, $weight: 500);
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 16px;
+      line-height: 90%;
+    }
+  }
+  &__title {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 40px, $height: 36px, $weight: 600);
+    padding-bottom: 20px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 70px;
+      line-height: 90%;
+      padding-bottom: 40px;
+      max-width: 500px;
+    }
+  }
+  &__subtitle {
+    max-width: map.get($elementSize, "mobile");
+    @include reset-brouser;
+    @include font($size: 12px, $height: 15.6px);
+    padding-bottom: 110px;
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      font-size: 20px;
+      line-height: 130%;
+      padding-bottom: 212px;
+      max-width: 500px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 182px;
+    }
+  }
+  &__image {
+    max-width: map.get($elementSize, "mobile");
+    @include screenSize($size: 768px) {
+      grid-column-start: 1;
+      max-width: 416px;
+      padding-bottom: 50px;
+    }
+    @include screenSize($size: 1440px) {
+      padding-bottom: 80px;
+    }
+  }
+  &__invite {
+    display: none;
+    @include reset-brouser;
+    @include font($size: 13px, $height: 16.25px, $spacing: 0.01em);
+    @include screenSize($size: 768px) {
+      display: block;
+      justify-self: end;
+      padding-right: 30px;
+    }
+  }
+  &__arrow {
+    margin-left: 10px;
+  }
+}
