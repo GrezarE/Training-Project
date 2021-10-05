@@ -927,7 +927,9 @@
 .popup__item:hover, .popup__item:active, .popup__item:focus {
   background-color: rgba(26, 26, 26, 0.6);
   cursor: pointer;
-  border: 1px solid #5036e6;
+}
+.popup__item:active {
+  outline: 1px solid #5036e6;
 }
 .popup_opened {
   visibility: visible;

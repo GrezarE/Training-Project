@@ -60,12 +60,11 @@
     border: unset;
     gap: 10px;
     @include screenSize($size: 768px) {
-    gap: 20px;
-    padding-bottom: 243px;
+      gap: 20px;
+      padding-bottom: 243px;
     }
     @include screenSize($size: 1440px) {
       padding-bottom: 253px;
-
     }
   }
   &__item {
@@ -90,8 +89,11 @@
     &:focus {
       background-color: $lightBlack;
       cursor: pointer;
-      border: 1px solid $purple;
-      }
+    }
+    &:active {
+      outline: 1px solid $purple;
+
+    }
   }
   &__button {
   }
